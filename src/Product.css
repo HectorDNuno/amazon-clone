@@ -1,6 +1,6 @@
 .product {
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /*this is what stacks the divs on top of each other*/
   align-items: center;
   justify-content: flex-end;
   margin: 10px;
@@ -10,10 +10,12 @@
   min-width: 100px;
   background-color: white;
   z-index: 1;
+  /* this gives the spacing for each product in this container */
 }
 
 .product__rating {
   display: flex;
+  /* this makes the raiting horizontal instead of vertical */
 }
 
 .product > img {
