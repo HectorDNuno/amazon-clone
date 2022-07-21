@@ -41,7 +41,7 @@
 .header__nav {
   display: flex;
   justify-content: space-evenly;
-  /* this is what makes the options on the right of the inout bar evenly spaced */
+  /* this is what makes the options on the right of the input bar evenly spaced */
 }
 
 .header__option {
