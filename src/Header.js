@@ -4,7 +4,7 @@ import "./Header.css";
 function Header() {
   return (
     <div className="header">
-      <img className="header__logo" src="./amazon-brands.svg" alt="amazon logo" />
+      <img className="header__logo" src="http://pngimg.com/uploads/amazon/amazon_PNG11.png" alt="amazon logo" />
 
       <div className="header__search">
         <input className="header__searchInput" type="text" />
