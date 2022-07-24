@@ -24,10 +24,6 @@ function Login() {
         navigation("/");
       })
       .catch((error) => alert(error.message));
-
-    // if (auth) {
-    //   history.push("/");
-    // }
   };
 
   return (
@@ -58,6 +54,11 @@ function Login() {
         <p>
           By signing-in you agree to the AMAZON FAKE CLONE Conditions of Use & Sale. Please see our Privacy Notice, our
           Cookies Notice and our Interest-Based Ads Notice.
+        </p>
+
+        <p>
+          ( <strong>email:</strong> example@example.com)
+          <br />(<strong>password:</strong> password)
         </p>
 
         <button onClick={register} className="login__registerButton">
