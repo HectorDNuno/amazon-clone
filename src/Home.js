@@ -14,7 +14,7 @@ function Home() {
         <div className="home__row">
           <Product
             id="12321341"
-            title="Nintendo Switch with Neon Blue and Neon Red Joy‑Con"
+            title="Nintendo Switch with Neon Blue and Neon Red Joy-Con"
             price={299.0}
             rating={5}
             image="https://m.media-amazon.com/images/I/61-PblYntsL._AC_SL1500_.jpg"
