@@ -14,51 +14,51 @@ function Home() {
         <div className="home__row">
           <Product
             id="12321341"
-            title="The Lean Startup: How Constant Innovation Creates Radically Successful Businesses Paperback"
-            price={11.96}
+            title="Nintendo Switch with Neon Blue and Neon Red Joy‑Con"
+            price={299.0}
             rating={5}
-            image="https://images-na.ssl-images-amazon.com/images/I/51Zymoq7UnL._SX325_BO1,204,203,200_.jpg"
+            image="https://m.media-amazon.com/images/I/61-PblYntsL._AC_SL1500_.jpg"
           />
           <Product
             id="49538094"
-            title="Kenwood kMix Stand Mixer for Baking, Stylish Kitchen Mixer with K-beater, Dough Hook and Whisk, 5 Litre Glass Bowl"
-            price={239.0}
+            title="GE Profile Opal | Countertop Nugget Ice Maker | Portable Ice Machine Makes up to 24 lbs. of Ice Per Day | Stainless Steel Finish"
+            price={479.0}
             rating={4}
-            image="https://images-na.ssl-images-amazon.com/images/I/81O%2BGNdkzKL._AC_SX450_.jpg"
+            image="https://m.media-amazon.com/images/I/810et96FfhL._AC_SL1500_.jpg"
           />
         </div>
 
         <div className="home__row">
           <Product
             id="4903850"
-            title="Samsung LC49RG90SSUXEN 49' Curved LED Gaming Monitor"
-            price={199.99}
+            title="Brother P-touch, PTD210, Easy-to-Use Label Maker, One-Touch Keys, Multiple Font Styles, 27 User-Friendly Templates, White"
+            price={59.98}
             rating={3}
-            image="https://images-na.ssl-images-amazon.com/images/I/71Swqqe7XAL._AC_SX466_.jpg"
+            image="https://m.media-amazon.com/images/I/81qdOn+31VL._AC_SL1500_.jpg"
           />
           <Product
             id="23445930"
-            title="Amazon Echo (3rd generation) | Smart speaker with Alexa, Charcoal Fabric"
-            price={98.99}
+            title="WD_BLACK 1TB SN850 NVMe Internal Gaming SSD Solid State Drive with Heatsink - Works with Playstation 5, Gen4 PCIe, M.2 2280, Up to 7,000 MB/s - WDS100T1XHE"
+            price={130.0}
             rating={5}
-            image="https://media.very.co.uk/i/very/P6LTG_SQ1_0000000071_CHARCOAL_SLf?$300x400_retinamobilex2$"
+            image="https://m.media-amazon.com/images/I/719mkEAj1IL._AC_SL1500_.jpg"
           />
           <Product
             id="3254354345"
-            title="New Apple iPad Pro (12.9-inch, Wi-Fi, 128GB) - Silver (4th Generation)"
-            price={598.99}
+            title={`GIGABYTE M28U 28" 144Hz Gaming Monitor, 3840 x 2160 SS IPS Display, 2ms (MPRT) Response Time, 94% DCI-P3, VESA Display HDR400, FreeSync Premium Pro, 1x Display Port 1.4, 2x HDMI 2.1`}
+            price={599.99}
             rating={4}
-            image="https://images-na.ssl-images-amazon.com/images/I/816ctt5WV5L._AC_SX385_.jpg"
+            image="https://m.media-amazon.com/images/I/71CnfsZex2S._AC_SL1500_.jpg"
           />
         </div>
 
         <div className="home__row">
           <Product
             id="90829332"
-            title="Samsung LC49RG90SSUXEN 49' Curved LED Gaming Monitor - Super Ultra Wide Dual WQHD 5120 x 1440"
-            price={1094.98}
+            title="Logitech MX Master 3 Advanced Wireless Mouse, Ultrafast Scrolling, Ergonomic, 4000 DPI, Customization, USB-C, Bluetooth, USB, Apple Mac, Microsoft PC Windows, Linux, iPad - Graphite"
+            price={99.99}
             rating={4}
-            image="https://images-na.ssl-images-amazon.com/images/I/6125mFrzr6L._AC_SX355_.jpg"
+            image="https://m.media-amazon.com/images/I/614w3LuZTYL._AC_SL1500_.jpg"
           />
         </div>
       </div>
