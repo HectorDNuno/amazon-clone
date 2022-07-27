@@ -1,3 +1,4 @@
+import { Navigation } from "@mui/icons-material";
 import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
@@ -7,10 +8,12 @@ import CheckoutProduct from "./CheckoutProduct";
 import "./Payment.css";
 import { getCartTotal } from "./reducer";
 import { useStateValue } from "./StateProvider";
+import { useNavigate } from "react-router-dom";
 
 function Payment() {
+  const navigation = useNavigate();
   const [{ cart, user }, dispatch] = useStateValue();
-  const [erroe, setError] = useState(null);
+  const [error, setError] = useState(null);
   const [disabled, setDisabled] = useState(true);
   const [succeeded, setSucceeded] = useState(false);
   const [processing, setProcessing] = useState("");
@@ -19,7 +22,11 @@ function Payment() {
   useEffect(() => {
     //make stripe secret taht allows to charge customer
     const getClientSecret = async () => {
-      const response = await axios;
+      const response = await axios({
+        method: "post",
+        url: `/payments/create?total=${getCartTotal(cart) * 100}`,
+      });
+      setClientSecret(response.data.clientSecret);
     };
 
     getClientSecret();
@@ -33,7 +40,20 @@ function Payment() {
     event.preventDefault();
     setProcessing(true);
 
-    // const payload = await stripe
+    const payload = await stripe
+      .confirmCardPayment(clientSecret, {
+        payment_method: {
+          card: elements.getElement(CardElement),
+        },
+      })
+      .then(({ paymentIntent }) => {
+        //payment confirmation
+        setSucceeded(true);
+        setError(null);
+        setProcessing(false);
+
+        navigation("/orders");
+      });
   };
 
   const handleChange = (event) => {
