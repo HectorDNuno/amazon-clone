@@ -1,20 +1,39 @@
 import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
-import React, { useState } from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+import CurrencyFormat from "react-currency-format";
 import { Link } from "react-router-dom";
 import CheckoutProduct from "./CheckoutProduct";
 import "./Payment.css";
+import { getCartTotal } from "./reducer";
 import { useStateValue } from "./StateProvider";
 
 function Payment() {
   const [{ cart, user }, dispatch] = useStateValue();
   const [erroe, setError] = useState(null);
   const [disabled, setDisabled] = useState(true);
+  const [succeeded, setSucceeded] = useState(false);
+  const [processing, setProcessing] = useState("");
+  const [clientSecret, setClientSecret] = useState(true);
+
+  useEffect(() => {
+    //make stripe secret taht allows to charge customer
+    const getClientSecret = async () => {
+      const response = await axios;
+    };
+
+    getClientSecret();
+  }, [cart]);
 
   const stripe = useStripe();
   const elements = useElements();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (event) => {
     // stripe stuff
+    event.preventDefault();
+    setProcessing(true);
+
+    // const payload = await stripe
   };
 
   const handleChange = (event) => {
@@ -65,6 +84,22 @@ function Payment() {
           <div className="payment__details">
             <form onSubmit={handleSubmit}>
               <CardElement onChange={handleChange} />
+
+              <div className="payment__priceContainer">
+                <CurrencyFormat
+                  renderText={(value) => <h3>Order Total: {value}</h3>}
+                  decimalScale={2}
+                  value={getCartTotal(cart)}
+                  displayType={"text"}
+                  thousandSeparator={true}
+                  prefix={"$"}
+                />
+                <button disabled={processing || disabled || succeeded}>
+                  <span> {processing ? <p>Processing</p> : "Buy Now"} </span>
+                </button>
+              </div>
+
+              {error && <div> {error} </div>}
             </form>
           </div>
         </div>
