@@ -1,14 +1,12 @@
-import { Navigation } from "@mui/icons-material";
+import "./Payment.css";
 import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import CurrencyFormat from "react-currency-format";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import CheckoutProduct from "./CheckoutProduct";
-import "./Payment.css";
 import { getCartTotal } from "./reducer";
 import { useStateValue } from "./StateProvider";
-import { useNavigate } from "react-router-dom";
 
 function Payment() {
   const navigation = useNavigate();
