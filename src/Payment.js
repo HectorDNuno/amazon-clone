@@ -7,6 +7,7 @@ import { Link, useNavigate } from "react-router-dom";
 import CheckoutProduct from "./CheckoutProduct";
 import { getCartTotal } from "./reducer";
 import { useStateValue } from "./StateProvider";
+import { db } from "./firebase";
 
 function Payment() {
   const navigation = useNavigate();
@@ -48,6 +49,13 @@ function Payment() {
       })
       .then(({ paymentIntent }) => {
         //payment confirmation
+
+        db.collection("users").doc(user?.uid).collection("orders").doc(paymentIntent.id).set({
+          cart: cart,
+          amount: paymentIntent.amount,
+          created: paymentIntent.created,
+        });
+
         setSucceeded(true);
         setError(null);
         setProcessing(false);
