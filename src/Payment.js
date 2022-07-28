@@ -1,6 +1,6 @@
 import "./Payment.css";
 import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
-import axios from "axios";
+import axios from "./axios";
 import React, { useEffect, useState } from "react";
 import CurrencyFormat from "react-currency-format";
 import { Link, useNavigate } from "react-router-dom";
@@ -15,7 +15,7 @@ function Payment() {
   const [disabled, setDisabled] = useState(true);
   const [succeeded, setSucceeded] = useState(false);
   const [processing, setProcessing] = useState("");
-  const [clientSecret, setClientSecret] = useState(true);
+  const [clientSecret, setClientSecret] = useState(null);
 
   useEffect(() => {
     //make stripe secret taht allows to charge customer
@@ -29,6 +29,8 @@ function Payment() {
 
     getClientSecret();
   }, [cart]);
+
+  console.log("the secret is", clientSecret);
 
   const stripe = useStripe();
   const elements = useElements();
