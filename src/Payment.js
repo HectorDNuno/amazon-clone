@@ -1,7 +1,7 @@
 import "./Payment.css";
-import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
 import axios from "./axios";
 import React, { useEffect, useState } from "react";
+import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
 import CurrencyFormat from "react-currency-format";
 import { Link, useNavigate } from "react-router-dom";
 import CheckoutProduct from "./CheckoutProduct";
@@ -51,6 +51,10 @@ function Payment() {
         setSucceeded(true);
         setError(null);
         setProcessing(false);
+
+        dispatch({
+          type: "EMPTY_CART",
+        });
 
         navigation("/orders");
       });
