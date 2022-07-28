@@ -53,7 +53,7 @@ function App() {
             ]}
           />
           <Route path="/login" element={<Login />} />
-          <Route path="/orders" element={<Orders />} />
+          <Route path="/orders" element={[<Header />, <Orders />]} />
         </Routes>
       </div>
     </Router>
