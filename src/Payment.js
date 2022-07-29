@@ -129,6 +129,16 @@ function Payment() {
                 <button className="payment__button" disabled={processing || disabled || succeeded}>
                   <span> {processing ? <p>Processing</p> : "Buy Now"} </span>
                 </button>
+
+                <div className="payment__cardCredentials">
+                  <small>
+                    <p>fake card credentials</p>
+                    <p>card number: 4242 4242 4242 4242</p>
+                    <p>card year: 04/24</p>
+                    <p>card CVC: 242</p>
+                    <p>card ZIP: 42424</p>
+                  </small>
+                </div>
               </div>
 
               {error && <div> {error} </div>}
