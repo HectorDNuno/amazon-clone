@@ -18,11 +18,12 @@ const promise = loadStripe(
 );
 
 function App() {
-  const [dispatch] = useStateValue();
+  const [{}, dispatch] = useStateValue();
 
   useEffect(() => {
     auth.onAuthStateChanged((authUser) => {
       console.log("USER is", authUser);
+
       if (authUser) {
         dispatch({
           type: "SET_USER",
@@ -35,7 +36,7 @@ function App() {
         });
       }
     });
-  }, []);
+  }, [dispatch]);
 
   return (
     <Router>
