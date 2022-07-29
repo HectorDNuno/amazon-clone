@@ -13,15 +13,21 @@ function Login() {
 
     auth
       .signInWithEmailAndPassword(email, password)
-      .then((auth) => navigation("/"))
+      .then((auth) => {
+        navigation("/");
+      })
       .catch((error) => alert(error.message));
   };
 
   const register = (e) => {
+    e.preventDefault();
+
     auth
       .createUserWithEmailAndPassword(email, password)
       .then((auth) => {
-        navigation("/");
+        if (auth) {
+          navigation("/");
+        }
       })
       .catch((error) => alert(error.message));
   };
@@ -36,7 +42,7 @@ function Login() {
         />
       </Link>
 
-      <dib className="login__container">
+      <div className="login__container">
         <h1>Sign-in</h1>
 
         <form>
@@ -64,7 +70,7 @@ function Login() {
         <button onClick={register} className="login__registerButton">
           Create your Amazon Account
         </button>
-      </dib>
+      </div>
     </div>
   );
 }
