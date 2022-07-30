@@ -54,3 +54,10 @@
   flex: 0.8;
 }
 
+@media (max-width:501px) {
+  .payment__section {
+    flex-direction: column;
+  }
+
+}
+

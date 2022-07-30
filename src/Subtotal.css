@@ -31,3 +31,9 @@
   color: #111;
   cursor: pointer;
 }
+
+@media (max-width:501px) {
+  .subtotal {
+    width: 90%;
+  }
+}
