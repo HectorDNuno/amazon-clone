@@ -5,6 +5,7 @@ import Checkout from "./Checkout";
 import Login from "./Login";
 import Orders from "./Orders";
 import Payment from "./Payment";
+import Compare from "./Compare";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useEffect } from "react";
 import { auth } from "./firebase";
@@ -55,6 +56,7 @@ function App() {
           />
           <Route path="/login" element={<Login />} />
           <Route path="/orders" element={[<Header />, <Orders />]} />
+          <Route path="/compare" element={[<Header />, <Compare />]} />
         </Routes>
       </div>
     </Router>
