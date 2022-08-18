@@ -1,0 +1,20 @@
+.compare {
+  padding: 20px 80px;
+}
+
+.compare > h1 {
+  margin: 30px 0;
+}
+
+@media (max-width:501px) {
+  .compare {
+    padding: 10px 10px;
+  }
+}
+
+select {
+  width: 200px;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid lightgray;
+}
