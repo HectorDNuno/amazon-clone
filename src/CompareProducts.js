@@ -4,7 +4,7 @@ import "./CompareProducts.css";
 import ComparedProduct from "./ComparedProduct";
 
 function CompareProducts() {
-  const [selectedProduct, setSelectedProduct] = useState("");
+  const [selectedProduct, setSelectedProduct] = useState();
 
   const handleSelect = (e) => {
     setSelectedProduct(e.target.value);
@@ -18,6 +18,7 @@ function CompareProducts() {
         <option value="Select a product" disabled selected>
           Select a product
         </option>
+
         {products.map((product) => (
           <option value={product.id} key={product.id}>
             {product.title}
@@ -25,7 +26,7 @@ function CompareProducts() {
         ))}
       </select>
 
-      <ComparedProduct productId={selectedProduct} />
+      <ComparedProduct comparedProduct={selectedProduct} />
     </div>
   );
 }
