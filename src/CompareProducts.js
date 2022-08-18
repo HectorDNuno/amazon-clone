@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { products } from "./ProductData";
-import "./Compare.css";
+import "./CompareProducts.css";
 import ComparedProduct from "./ComparedProduct";
 
 function CompareProducts() {
