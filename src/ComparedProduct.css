@@ -5,7 +5,7 @@
   max-width: 500px;
 }
 
-img {
+.comparedProduct__image {
   max-height: 100px;
   width: 50%;
   object-fit: contain;
