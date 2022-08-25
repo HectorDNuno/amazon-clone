@@ -10,7 +10,7 @@ function ComparedProduct({ comparedProduct }) {
           <>
             {product.id === comparedProduct && (
               <div className="comparedProduct__details">
-                <img src={product.image} alt="" />
+                <img className="comparedProduct__image" src={product.image} alt="" />
 
                 <p>{product.title}</p>
 
