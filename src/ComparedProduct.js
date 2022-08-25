@@ -10,10 +10,22 @@ function ComparedProduct({ comparedProduct }) {
           <>
             {product.id === comparedProduct && (
               <div className="comparedProduct__details">
-                <p>{product.title}</p>
-                <p>{product.price}</p>
-                <p>{product.rating}</p>
                 <img src={product.image} alt="" />
+
+                <p>{product.title}</p>
+
+                <p className="product__price">
+                  <small>$</small>
+                  <strong>{product.price}</strong>
+                </p>
+
+                <div className="product__rating">
+                  {Array(product.rating)
+                    .fill()
+                    .map((_, i) => (
+                      <p>🌟</p>
+                    ))}
+                </div>
               </div>
             )}
           </>
