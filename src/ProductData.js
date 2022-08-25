@@ -30,4 +30,20 @@ export const products = [
     rating: 5,
     image: "https://m.media-amazon.com/images/I/719mkEAj1IL._AC_SL1500_.jpg",
   },
+  {
+    id: "3254354345",
+    title:
+      "GIGABYTE M28U 28 144Hz Gaming Monitor, 3840 x 2160 SS IPS Display, 2ms (MPRT) Response Time, 94% DCI-P3, VESA Display HDR400, FreeSync Premium Pro, 1x Display Port 1.4, 2x HDMI 2.1",
+    price: 599.99,
+    rating: 4,
+    image: "https://m.media-amazon.com/images/I/71CnfsZex2S._AC_SL1500_.jpg",
+  },
+  {
+    id: "90829332",
+    title:
+      "Logitech MX Master 3 Advanced Wireless Mouse, Ultrafast Scrolling, Ergonomic, 4000 DPI, Customization, USB-C, Bluetooth, USB, Apple Mac, Microsoft PC Windows, Linux, iPad - Graphite",
+    price: 99.99,
+    rating: 4,
+    image: "https://m.media-amazon.com/images/I/614w3LuZTYL._AC_SL1500_.jpg",
+  },
 ];
