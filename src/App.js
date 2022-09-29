@@ -1,15 +1,14 @@
-import "./App.css";
-import Header from "./Header";
-import Home from "./Home";
-import Checkout from "./Checkout";
-import Login from "./Login";
-import Orders from "./Orders";
-import Payment from "./Payment";
-import CompareProducts from "./CompareProducts";
+import Header from "../src/components/Header";
+import Home from "../src/components/Home";
+import Checkout from "../src/components/Checkout";
+import Login from "../src/components/Login";
+import Orders from "../src/components/Orders";
+import Payment from "../src/components/Payment";
+import CompareProducts from "../src/components/CompareProducts";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useEffect } from "react";
-import { auth } from "./firebase";
-import { useStateValue } from "./StateProvider";
+import { auth } from "../src/components/firebase";
+import { useStateValue } from "../src/components/StateProvider";
 import { loadStripe } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
 
