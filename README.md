@@ -1,70 +1,53 @@
-# Getting Started with Create React App
+# Nozama - an Amazon Clone
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![license](https://img.shields.io/badge/license-MIT-orange)
 
-## Available Scripts
+## Description
+Hello! This is an e-commerece web app that is a clone of the Amazon website. Not only does it look like Amazon, it also has similar features. In the web app, you can do things like create a log in, add and remove items from the cart, 'purchase' items, and compare different products! This project registers and authenticates accounts using [firebase](https://firebase.google.com/). To keep track of items in the cart I use a reducer to dispatch the selected items to the data layer. For purchasing items, I use [Stripe](https://stripe.com/) for payment processing. For all the totals and subtotals I used [react-currency-format] (https://www.npmjs.com/package/react-currency-format). 
 
-In the project directory, you can run:
+The biggest challenge was using the data layer. I hadn't worked with something that was a little more abstract before so trying to visualzie what was happening was difficult. Other challenges were learning how to use the right syntax for Stripe and firebase.
 
-### `npm start`
+In the future, I'd like to improve the comparing products function and add other fuctionalites like searching for products and product pages.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Install Locally
+Clone the project from GitHub by running this on the command line
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```
+$ git clone <URL-for-this-project>
+```
 
-### `npm test`
+## Dependencies 
+Material UI 
+```
+$ npm install @mui/material @emotion/react @emotion/styled @mui/icons-material
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Stripe 
+```
+$ npm install @stripe/react-stripe-js @stripe/stripe-js
+```
 
-### `npm run build`
+Axios
+```
+$ npm install axios
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Firebase
+```
+$ npm install firebase
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Moment.js
+```
+$ npm install moment
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+react-currency-format
+```
+$ npm install react-currency-format
+```
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+react-router-dom
+```
+$ npm install react-router-dom
+```
