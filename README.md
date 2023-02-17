@@ -12,6 +12,8 @@ The biggest challenge was using the data layer. I hadn't worked with something t
 
 In the future, I'd like to improve the comparing products function and add other fuctionalites like searching for products and product pages.
 
+You can check it out [here](https://clone-a8546.web.app/)
+
 ## Install Locally
 
 Clone the project from GitHub by running this on the command line
